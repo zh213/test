@@ -1,0 +1,365 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+.marp-extended-theme-list {
+	margin-bottom: 1rem;
+}
+
+.marp-extended-theme-empty {
+	color: var(--text-muted);
+	margin: 0.5rem 0 1rem;
+}
+
+.view-content.marp-extended-preview-root {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 0;
+}
+
+.marp-extended-preview-toolbar {
+	align-items: center;
+	background: var(--background-primary);
+	border-bottom: 1px solid var(--background-modifier-border);
+	display: flex;
+	flex: 0 0 auto;
+	gap: var(--size-2-2);
+	margin: 0;
+	overflow-x: auto;
+	padding: var(--size-2-2);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.marp-extended-preview-content {
+	--marp-extended-preview-zoom: 1;
+	flex: 1 1 auto;
+	overflow: auto;
+	overscroll-behavior: contain;
+	padding: var(--size-2-2) 0 0;
+}
+
+.marp-extended-preview-content > .marp-extended-preview-iframe {
+	background: transparent;
+	border: 0;
+	display: block;
+	margin-inline: auto;
+}
+
+.marp-extended-presenter-notes {
+	background: var(--background-secondary);
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	height: var(--marp-extended-presenter-notes-height, auto);
+	min-height: 6rem;
+	overflow: hidden;
+	position: relative;
+	white-space: pre-wrap;
+}
+
+.marp-extended-presenter-notes-resize {
+	background: transparent;
+	cursor: ns-resize;
+	height: 12px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	touch-action: none;
+	user-select: none;
+	z-index: 1;
+}
+
+.marp-extended-presenter-notes-body {
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow: auto;
+	padding: var(--size-4-3) var(--size-4-3) calc(var(--size-4-8) + var(--size-4-3));
+}
+
+.marp-extended-presenter-notes-heading {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	font-weight: var(--font-semibold);
+	margin-bottom: var(--size-2-2);
+}
+
+.marp-extended-presenter-notes ul {
+	margin: 0;
+	padding-inline-start: var(--size-4-4);
+}
+
+.marp-extended-presenter-notes[hidden] { display: none; }
+
+.marp-extended-preview-toolbar-button {
+	align-items: center;
+	background: transparent;
+	border: 0;
+	border-radius: var(--radius-s);
+	color: var(--text-muted);
+	cursor: pointer;
+	display: inline-flex;
+	height: var(--size-4-8);
+	justify-content: center;
+	padding: var(--size-2-2);
+	width: var(--size-4-8);
+}
+
+.marp-extended-preview-toolbar-button:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.marp-extended-preview-toolbar-button.is-enabled {
+	color: var(--interactive-accent);
+}
+
+.marp-extended-preview-zoom-controls {
+	align-items: center;
+	display: inline-flex;
+	gap: var(--size-2-1);
+	margin-inline: var(--size-2-1);
+}
+
+.marp-extended-preview-zoom-label {
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+	min-width: 3.5em;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.marp-extended-preview-toolbar-button svg {
+	flex: 0 0 auto;
+	height: var(--icon-size);
+	width: var(--icon-size);
+}
+
+.marp-extended-add-theme-modal .marp-extended-theme-css-setting {
+	align-items: stretch;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.marp-extended-add-theme-modal .marp-extended-theme-css-setting .setting-item-control {
+	width: 100%;
+}
+
+.marp-extended-theme-css-input {
+	font-family: var(--font-monospace);
+	min-height: 18rem;
+	width: 100%;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview.show-properties .HyperMD-frontmatter {
+	display: none;
+}
+
+.marp-extended-editor-mermaid {
+	box-sizing: border-box;
+	margin: 0.75em 0;
+	max-width: 100%;
+	position: relative;
+	width: auto;
+}
+
+.marp-extended-editor-mermaid-source-button {
+	align-items: center;
+	background: var(--background-modifier-border);
+	border: 1px solid var(--background-modifier-border-hover);
+	border-radius: var(--radius-s);
+	color: var(--text-muted);
+	cursor: pointer;
+	display: flex;
+	font-size: var(--font-ui-smaller);
+	height: 1.8em;
+	justify-content: center;
+	line-height: 1;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	right: 0.5em;
+	top: 0.5em;
+	transition: opacity 120ms ease-in-out;
+	width: 1.8em;
+	z-index: 1;
+}
+
+.marp-extended-editor-mermaid:hover .marp-extended-editor-mermaid-source-button,
+.marp-extended-editor-mermaid-source-button:focus-visible {
+	opacity: 1;
+}
+
+.markdown-preview-view .marp-extended-editor-mermaid-source-button {
+	display: none;
+}
+
+.marp-extended-editor-mermaid-source-button:hover,
+.marp-extended-editor-mermaid-source-button:focus-visible {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.marp-extended-editor-mermaid section {
+	background: transparent;
+	box-sizing: border-box;
+	max-width: 100%;
+	overflow: hidden;
+	width: auto;
+}
+
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35em;
+	justify-content: center;
+	margin: 0.5rem auto 0;
+	max-width: 100%;
+	/* Keep BM natural size; allow official wide diagrams to shrink. */
+	width: fit-content;
+}
+
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram[data-mermaid-renderer="mermaid"] {
+	overflow: hidden;
+	width: 100%;
+}
+
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram img,
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram svg,
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram embed {
+	display: block;
+	height: auto;
+	max-height: min(70vh, 640px);
+	max-width: 100%;
+	width: auto;
+}
+
+/* Beautiful-mermaid stroke emphasis only; official Mermaid uses its own stroke widths. */
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram[data-mermaid-renderer="beautiful-mermaid"] svg path,
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram[data-mermaid-renderer="beautiful-mermaid"] svg circle,
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram[data-mermaid-renderer="beautiful-mermaid"] svg ellipse,
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram[data-mermaid-renderer="beautiful-mermaid"] svg rect,
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram[data-mermaid-renderer="beautiful-mermaid"] svg polygon {
+	stroke-width: 2px;
+}
+
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram svg text {
+	font-weight: 600;
+}
+
+.marp-extended-editor-mermaid section .mermaid-diagram-container.mermaid-diagram figcaption {
+	color: currentColor;
+	font-size: 0.65em;
+	line-height: 1.3;
+	opacity: 0.72;
+	text-align: center;
+}
+
+.marp-extended-editor-mermaid .mermaid-render-error {
+	color: var(--text-error);
+	white-space: pre-wrap;
+}
+
+.marp-extended-editor-mermaid-loading {
+	color: var(--text-muted);
+	font-size: 0.85em;
+	padding: 0.5em 0;
+}
+
+.marp-extended-mermaid-scroll {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	margin: 8px 0;
+	padding: 8px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 8px;
+	background: var(--background-secondary);
+	overscroll-behavior-x: contain;
+}
+
+.marp-extended-mermaid-zoom-surface {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 100%;
+	width: max-content;
+}
+
+/* Higher specificity than mermaid theme CSS (section .mermaid-diagram-container...) so overrides win without !important. */
+.marp-extended-editor-mermaid section .marp-extended-mermaid-scroll .mermaid-diagram-container.mermaid-diagram {
+	display: inline-block;
+	max-width: none;
+	width: fit-content;
+	transform-origin: center center;
+	margin: 0;
+}
+
+.marp-extended-editor-mermaid section .marp-extended-mermaid-scroll .mermaid-diagram-container.mermaid-diagram svg {
+	display: block;
+	max-width: none;
+	max-height: none;
+}
+
+.marp-extended-mermaid-controls {
+	position: sticky;
+	left: 0;
+	inset-inline-start: 0;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	gap: 4px;
+	width: max-content;
+	margin-top: 6px;
+	padding: 3px;
+	border-radius: 6px;
+	background: color-mix(in srgb, var(--background-primary) 88%, transparent);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.marp-extended-mermaid-control-btn {
+	height: 22px;
+	min-width: 28px;
+	padding: 0 7px;
+	border: none;
+	border-radius: 4px;
+	background: transparent;
+	color: var(--text-muted);
+	font-size: 12px;
+	line-height: 22px;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.marp-extended-mermaid-control-btn-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.marp-extended-mermaid-control-btn-icon svg {
+	width: 13px;
+	height: 13px;
+}
+
+.marp-extended-mermaid-control-btn:hover,
+.marp-extended-mermaid-control-btn:focus-visible {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
